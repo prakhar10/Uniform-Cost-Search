@@ -4,7 +4,7 @@ class Node:
     cost = None
     node = None
 
-    def __init__(self,state=None,depth=0,cost=0, node=None):
+    def __init__(self,state=None,depth=0,cost=0.0, node=None):
         self.state = state
         self.depth = depth
         self.cost = cost

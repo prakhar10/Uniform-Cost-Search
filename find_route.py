@@ -65,7 +65,7 @@ def expand_nodes(data_dictionary,fringe,visited_nodes,destination):
 
                 for child_node in node_list:
                     child_node.set_depth(node.get_depth()+1)
-                    child_node.set_cost(int(child_node.get_cost()) + node.get_cost())
+                    child_node.set_cost(float(child_node.get_cost()) + node.get_cost())
                     child_node.set_node(node)
                     fringe.append(child_node)
 
