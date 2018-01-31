@@ -54,6 +54,10 @@ def expand_nodes(data_dictionary,fringe,visited_nodes,destination):
                 print("Distance:" + str(total_distance_node.get_cost()) +" km")
                 print("Route:")
                 for child in backtrack:
+
+                    if len(backtrack) == 1:
+                        print(child.get_state() + " to " + child.get_state() + " , "+ str(total_distance_node.get_cost())+ " km")
+
                     if count < len(backtrack)-1:
                         count = count + 1
                         print(child.get_state() + " to " + backtrack[count].get_state() + " , " + str(backtrack[count].get_cost() - child.get_cost()) + " km")
